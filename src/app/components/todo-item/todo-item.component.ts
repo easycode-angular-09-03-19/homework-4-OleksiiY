@@ -1,4 +1,5 @@
 import {Component, OnInit, Input, Output, EventEmitter, OnChanges, SimpleChanges, OnDestroy,} from '@angular/core';
+import {Todo} from '../../interfaces/Todo';
 
 @Component({
   selector: 'app-todo-item',
@@ -9,8 +10,8 @@ import {Component, OnInit, Input, Output, EventEmitter, OnChanges, SimpleChanges
 export class TodoItemComponent implements OnInit, OnChanges, OnDestroy {
 
   @Input() todo;
-  @Output() deleteTodo = new EventEmitter();
-  @Output() markedDone = new EventEmitter();
+  @Output() deleteTodo = new EventEmitter<Todo>();
+  @Output() markedDone = new EventEmitter<Todo>();
 
   constructor() {
   }

@@ -1,0 +1,26 @@
+.container{
+  margin:10px;
+}
+.btn{
+  width: 150px;
+  height: 50px;
+  margin-bottom: 5px;
+  border-radius: 15px;
+  border:1px solid black;
+  -webkit-border-radius: 15px;
+  background-color: blanchedalmond;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn:hover{
+  background-color: lightblue;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+

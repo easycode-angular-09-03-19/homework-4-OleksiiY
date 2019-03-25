@@ -1,9 +1,10 @@
-<button (click)="completeAllTasks()">Mark all todos as Done</button>
-<ng-container *ngFor="let todo of todoList">
-  <app-todo-item
-    [todo]="todo"
-    (deleteTodo)="onOutputDeleteEvent($event)"
-    (markedDone)="onOutputMarkedDoneEvent($event)"
-  ></app-todo-item>
-</ng-container>
-
+<div class="container">
+  <button (click)="completeAllTasks()" class="btn">Mark all todos as Done</button>
+  <ng-container *ngFor="let todo of todoList">
+    <app-todo-item
+      [todo]="todo"
+      (deleteTodo)="onOutputDeleteEvent($event)"
+      (markedDone)="onOutputMarkedDoneEvent($event)"
+    ></app-todo-item>
+  </ng-container>
+</div>

@@ -2,8 +2,8 @@
   <h5>Todo Item element</h5>
   <p [ngClass]="{completed:todo.completed}">{{ todo.text }}</p>
   <div class="buttons-group">
-    <button (click)="onDelete()">Delete todo item</button>
-    <button (click)="onMarkedDone()">Mark as Done</button>
+    <button (click)="onDelete()" class="btn">Delete todo item</button>
+    <button (click)="onMarkedDone()" class="btn">Mark as Done</button>
   </div>
 </div>
 
