@@ -1,4 +1,4 @@
-import {Component, OnInit, Input, Output, EventEmitter, OnChanges, SimpleChanges, OnDestroy,} from '@angular/core';
+import {Component, OnInit, Input, Output, EventEmitter, OnChanges, SimpleChanges} from '@angular/core';
 import {Todo} from '../../interfaces/Todo';
 
 @Component({
@@ -7,7 +7,7 @@ import {Todo} from '../../interfaces/Todo';
   styleUrls: ['./todo-item.component.css']
 })
 
-export class TodoItemComponent implements OnInit, OnChanges, OnDestroy {
+export class TodoItemComponent implements OnInit, OnChanges {
 
   @Input() todo;
   @Output() deleteTodo = new EventEmitter<Todo>();
@@ -17,15 +17,10 @@ export class TodoItemComponent implements OnInit, OnChanges, OnDestroy {
   }
 
   ngOnChanges(changes: SimpleChanges) {
-
-  }
-
-  ngOnDestroy() {
   }
 
   ngOnInit() {
   }
-
 
   onDelete() {
     let consent = confirm('Are you sure want to delete? ');

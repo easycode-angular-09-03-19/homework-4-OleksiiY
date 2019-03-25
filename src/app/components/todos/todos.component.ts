@@ -18,13 +18,10 @@ export class TodosComponent implements OnInit {
       id: 2,
       text: 'Do Work',
       completed: false
-    },
-    {
-      id: 3,
-      text: 'To have a lunch',
-      completed: false
     }
   ];
+
+  isEmptyList: boolean;
 
   constructor() {
   }
@@ -33,18 +30,33 @@ export class TodosComponent implements OnInit {
   ngOnInit() {
   }
 
+  onOutputAddToTodoList(todoText): void {
+    let idTodo = this.todoList.length + 1;
+    let newTodo: Todo = {
+      id: idTodo,
+      text: todoText,
+      completed: false
+    };
+    this.todoList.push(newTodo);
+    if (this.todoList.length > 0) {
+      this.isEmptyList = false;
+    }
+  }
 
-  onOutputDeleteEvent(item: Todo) {
-    console.log('item', item);
+  onOutputDeleteEvent(item: Todo): void {
     this.todoList.forEach((elem, index, todoList) => {
       if (item.id == elem.id) {
         todoList.splice(index, 1);
+        if (this.todoList.length == 0) {
+          this.isEmptyList = true;
+        }
         return;
       }
     });
+
   }
 
-  onOutputMarkedDoneEvent(item: Todo) {
+  onOutputMarkedDoneEvent(item: Todo): void {
     this.todoList.forEach((elem, index, todoList) => {
       if (item.id == elem.id) {
         todoList[index].completed = item.completed;
@@ -53,12 +65,9 @@ export class TodosComponent implements OnInit {
     });
   }
 
-  completeAllTasks() {
+  completeAllTasks(): void {
     this.todoList.forEach((elem, index, todoList) => {
       elem.completed = true;
     });
-
   }
-
-
 }

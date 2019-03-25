@@ -1,16 +1,9 @@
-.container {
-  border: 1px solid black;
-  border-radius: 15px;
-  padding: 10px;
-  min-width: 350px;
-  width: 50%;
-  background-color: royalblue;
-  color: #f2f2f2;
+input.ng-touched.ng-invalid {
+  border: solid red 2px;
 }
 
-.completed {
-  text-decoration: line-through;
-  color: red;
+input.ng-touched.ng-valid {
+  border: solid green 2px;
 }
 
 .btn {
@@ -32,4 +25,19 @@
 
 .btn:focus {
   outline: none;
+}
+
+.input-element {
+  margin-left: 10px;
+  height: 30px;
+  background-color: #eeeeee;
+  border-radius: 10px;
+}
+
+.input-element:focus {
+  outline: none;
+}
+
+form {
+  margin-bottom: 5px;
 }
