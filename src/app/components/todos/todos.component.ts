@@ -1,4 +1,5 @@
-import {Component, OnInit,} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Todo} from '../../interfaces/Todo';
 
 @Component({
   selector: 'app-todos',
@@ -7,7 +8,7 @@ import {Component, OnInit,} from '@angular/core';
 })
 export class TodosComponent implements OnInit {
 
-  todoList = [
+  todoList: Todo[] = [
     {
       id: 1,
       text: 'Do Sport',
@@ -33,23 +34,23 @@ export class TodosComponent implements OnInit {
   }
 
 
-  onOutputDeleteEvent(item) {
+  onOutputDeleteEvent(item: Todo) {
+    console.log('item', item);
     this.todoList.forEach((elem, index, todoList) => {
-      if (item.todoId == elem.id) {
+      if (item.id == elem.id) {
         todoList.splice(index, 1);
         return;
       }
     });
   }
 
-  onOutputMarkedDoneEvent(item) {
+  onOutputMarkedDoneEvent(item: Todo) {
     this.todoList.forEach((elem, index, todoList) => {
       if (item.id == elem.id) {
         todoList[index].completed = item.completed;
         return;
       }
     });
-    console.log('this.todoList', this.todoList);
   }
 
   completeAllTasks() {
@@ -59,8 +60,5 @@ export class TodosComponent implements OnInit {
 
   }
 
-  // changeInfoDataHandler(){
-  //   this.info += 'Some new info';
-  // }
 
 }

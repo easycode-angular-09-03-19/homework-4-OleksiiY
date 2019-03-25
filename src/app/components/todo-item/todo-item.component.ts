@@ -29,7 +29,7 @@ export class TodoItemComponent implements OnInit, OnChanges, OnDestroy {
   onDelete() {
     let consent = confirm('Are you sure want to delete? ');
     if (consent) {
-      this.deleteTodo.emit({todoId: this.todo.id});
+      this.deleteTodo.emit(this.todo);
     } else {
       return;
     }
