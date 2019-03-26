@@ -1,0 +1,35 @@
+.container {
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 10px;
+  min-width: 350px;
+  width: 50%;
+  background-color: royalblue;
+  color: #f2f2f2;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: red;
+}
+
+.btn {
+  width: 120px;
+  height: 40px;
+  border-radius: 15px;
+  border: 1px solid black;
+  -webkit-border-radius: 15px;
+  background-color: lightcyan;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn:hover {
+  background-color: lightblue;
+}
+
+.btn:focus {
+  outline: none;
+}

@@ -1,0 +1,43 @@
+input.ng-touched.ng-invalid {
+  border: solid red 2px;
+}
+
+input.ng-touched.ng-valid {
+  border: solid green 2px;
+}
+
+.btn {
+  width: 120px;
+  height: 40px;
+  border-radius: 15px;
+  border: 1px solid black;
+  -webkit-border-radius: 15px;
+  background-color: lightcyan;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn:hover {
+  background-color: lightblue;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.input-element {
+  margin-left: 10px;
+  height: 30px;
+  background-color: #eeeeee;
+  border-radius: 10px;
+}
+
+.input-element:focus {
+  outline: none;
+}
+
+form {
+  margin-bottom: 5px;
+}
