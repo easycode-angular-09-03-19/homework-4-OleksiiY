@@ -30,7 +30,7 @@ export class TodosComponent implements OnInit {
   ngOnInit() {
   }
 
-  onOutputAddToTodoList(todoText): void {
+  onOutputAddToTodoList(todoText: string): void {
     let idTodo = this.todoList.length + 1;
     let newTodo: Todo = {
       id: idTodo,
